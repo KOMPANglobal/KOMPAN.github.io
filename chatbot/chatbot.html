@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="chat-container">
+    <h2>Chatbot</h2>
+    <textarea id="user-message" placeholder="Wpisz wiadomość..."></textarea>
+    <button onclick="sendMessage()">Wyślij</button>
+    <div id="chat-box"></div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      var message = document.getElementById('user-message').value;
+      var chatBox = document.getElementById('chat-box');
+      var newMessage = document.createElement('div');
+      newMessage.classList.add('user-message');
+      newMessage.textContent = message;
+      chatBox.appendChild(newMessage);
+    }
+  </script>
+</body>
+</html>

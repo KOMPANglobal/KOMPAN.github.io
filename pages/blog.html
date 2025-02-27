@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asortyment okien</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo Firmy">
+        <h1>Nazwa Firmy</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="asortyment.html">Asortyment</a></li>
+            <li><a href="techniki.html">Techniki produkcji</a></li>
+            <li><a href="programy-pokazowe.html">Programy pokazowe</a></li>
+            <li><a href="wyrysy-techniczne.html">Wyrysy techniczne</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="porady.html">Porady</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Asortyment okien</h2>
+        <p>Tutaj możesz umieścić opis asortymentu okien, podzielony na kategorie (np. okna PVC, okna drewniane, okna aluminiowe).</p>
+        <!-- Przykładowy kod HTML dla kategorii okien PVC -->
+        <h3>Okna PVC</h3>
+        <p>Opis okien PVC.</p>
+        <img src="img/asortyment/okna-pvc.jpg" alt="Okna PVC">
+        <!-- Powtórz dla innych kategorii -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Nazwa Firmy</p>
+    </footer>
+
+    <!-- Linkowanie do plików JavaScript -->
+    <script src="../components/gallery.js"></script>       <!-- Logika galerii -->
+    <script src="../components/chatBot.js"></script>       <!-- Logika chatbota -->
+    <script src="../components/form.js"></script>          <!-- Logika formularza -->
+
+    <script>
+        // Inicjalizacja funkcji po załadowaniu strony
+        window.addEventListener('DOMContentLoaded', () => {
+            initializeGallery();      // Funkcja z gallery.js
+            initializeChatBot();      // Funkcja z chatBot.js
+            setupFormHandler();       // Funkcja z form.js
+        });
+    </script>
+</body>
+</html>

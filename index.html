@@ -3,34 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOMPAN - Seria NEO-ALU-STYLE</title>
+    <title>Moja Strona</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .header { display: flex; justify-content: space-between; align-items: center; }
-        .header img { max-height: 100px; }
-        .content { padding: 20px; }
-        h1 { color: #333; }
-        p { color: #FF5733; }
-        .image { text-align: center; }
-        .image img { max-width: 100%; height: auto; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 100px;
+            margin-right: 1rem;
+        }
+        header div {
+            display: flex;
+            flex-direction: column;
+        }
+        header div h1, header div h2 {
+            margin: 0;
+        }
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+        .links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid #00f;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: #00f;
+            color: white;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background: #333;
+            color: white;
+        }
+        main {
+            padding: 2rem;
+        }
+        .lower-section {
+            display: flex;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .lower-section img {
+            max-width: 100px;
+            margin-right: 1rem;
+        }
+        .lower-section div {
+            flex-grow: 1;
+        }
+        .lower-section h3, .lower-section p {
+            margin: 0;
+        }
+        .lower-section p {
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .gallery img {
+            max-width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Seria Stolarki NEO</h1>
-            <img src="assets\images\kompan_logo.png" alt="NEO-ALU-STYLE">
+    <header>
+        <div>
+            <img src="logo.png" alt="Logo Firmy">
+            <h1>Producent okien i drzwi</h1>
         </div>
-        <div class="content">
-            <h2>NEO-ALU-STYLE</h2>
-            <p>Technologia w służbie nowoczesnego wzornictwa, teraz nie musisz już iść na kompromisy, żeby zrealizować ambitne cele.</p>
-            <p>Poznaj serię stolarki NEO</p>
+        <div class="links">
+            <a href="#">Stolarka PVC</a>
+            <a href="#">Okna Przesuwne</a>
+            <a href="#">Transport usługi</a>
         </div>
-        <div class="image">
-            <img src="assets\images\1B.jpg" alt="Cross-section of window frame">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Strona główna</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#sale">Wyprzedaż</a></li>
+            <li><a href="#shop">Sklep</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main id="home">
+        <h2>Wieloletnia doświadczenie - fachowa wycena.</h2>
+        <p>Indywidualnie podejście do każdego klienta i jego potrzeb jest dla nas kluczowe.</p>
+        <div class="gallery">
+            <img src="zdjecie1.jpg" alt="Opis zdjęcia 1">
+            <img src="zdjecie2.jpg" alt="Opis zdjęcia 2">
+            <img src="zdjecie3.jpg" alt="Opis zdjęcia 3">
+            <img src="zdjecie4.jpg" alt="Opis zdjęcia 4">
+        </div>
+        <p>KOMPLEKSOWE USŁUGI.</p>
+        
+        <div class="lower-section" id="about">
+            <img src="obraz.jpg" alt="Obraz">
+            <div>
+                <h3>Nagłówek 1</h3>
+                <h4>Nagłówek 2</h4>
+                <p>Tekst opisujący zawartość sekcji z mniejszą czcionką.</p>
+                <p><a href="#">Poznaj serię stolarki...</a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; kompan@list.pl</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Modal Image">
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="helpers/dom-helper.js"></script>
+    <script>
+      const button = getElementById('myButton');
+      addClass(button, 'active');
+    </script>
+
 </body>
 </html>

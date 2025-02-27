@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            color: #333;
+        }
+        header {
+            background-color: #0a2a43;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 120px;
+            margin-right: 1rem;
+        }
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+        .links a {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: #0073e6;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: #0056b3;
+            color: white;
+        }
+        .contact-container {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .contact-container h2 {
+            color: #0a2a43;
+        }
+        .contact-container p {
+            font-size: 1.1rem;
+        }
+        .panorama-container {
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .panorama-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <div>
+            <h1>Kontakt</h1>
+        </div>
+        <div class="links">
+            <a href="#">Stolarka PVC</a>
+            <a href="#">Okna Przesuwne</a>
+            <a href="#">Transport usługi</a>
+        </div>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h2>Skontaktuj się z nami</h2>
+            <p><strong>Kompan Krzysztof Kasica</strong></p>
+            <p><strong>Adres:</strong> ul. Kolejowa 47, 23-200 Kraśnik</p>
+            <p><strong>NIP:</strong> PL715 000 15 13</p>
+            <p><strong>Godziny otwarcia:</strong> Poniedziałek-Piątek 8:00-16:00</p>
+            <p><strong>Telefon:</strong> 81 825 17 47</p>
+            <p><strong>Email:</strong> kompan@list.pl</p>
+        </div>
+        <div class="panorama-container">
+            <img src="panorama.jpg" alt="Panorama firmy">
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.7530380406796!2d22.223163476563868!3d50.911698771580844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47235b0a4e6b0b0d%3A0xe3d7b3dbef9f726!2sKolejowa%2047%2C%2023-200%20Kra%C5%9Bnik%2C%20Polska!5e0!3m2!1spl!2spl!4v1616626091381!5m2!1spl!2spl" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,6 +1,121 @@
-.background-section {
-  background-image: url('../images/kompan_tłologo.png');
-  background-size: cover;
-  background-position: center;
-  /* Dodatkowe stylizacje */
+/* Resetowanie marginesów i paddingów domyślnych */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ustawienia ogólne */
+body {
+  font-family: Arial, sans-serif; /* Czcionka całej strony */
+  background-color: #f4f4f4; /* Kolor tła */
+  color: #333; /* Kolor tekstu */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50; /* Kolor nagłówków */
+}
+
+/* Nagłówek */
+header {
+  background-color: #3498db; /* Kolor tła nagłówka */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* Sekcja treści */
+section {
+  padding: 20px;
+}
+
+/* Stopka */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Stylowanie przycisków */
+button {
+  background-color: #3498db; /* Kolor tła przycisku */
+  color: white; /* Kolor tekstu */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Kolor tła przycisku po najechaniu */
+}
+
+/* Formularz */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select, input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Galeria */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  #gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            color: #333;
+        }
+        header {
+            background-color: #0a2a43;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 120px;
+            margin-right: 1rem;
+        }
+        header div {
+            display: flex;
+            flex-direction: column;
+        }
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+        .links a {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: #0073e6;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: #0056b3;
+            color: white;
+        }
+        .section-header {
+            background: #0056b3;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .product-section {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .product-section img {
+            max-width: 200px;
+            margin-right: 1rem;
+        }
+        .product-section div {
+            flex-grow: 1;
+        }
+        .product-section h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .product-section h4 {
+            font-size: 1rem;
+            color: #333;
+            background: #ffcc00;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        .product-section p {
+            font-size: 0.9em;
+        }
+        .highlight {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #d9534f;
+        }
+        .bold-large {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .link-hover {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .link-hover:hover::after {
+            content: "POZNAJ CAŁĄ SERIĘ";
+            font-size: 0.9rem;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <div>
+            <h1>Okna i drzwi przez dekady</h1>
+        </div>
+        <div class="links">
+            <a href="#">Stolarka PVC</a>
+            <a href="#">Okna Przesuwne</a>
+            <a href="#">Transport usługi</a>
+        </div>
+    </header>
+    <main>
+        <div class="section-header">Przegląd linii stylistycznych stolarki okiennej</div>
+        
+        <div class="product-section">
+            <img src="1C.jpg" alt="Bluevolution 82">
+            <div>
+                <h3>Linia stylistyczna Salamander Bluevolution 82mm</h3>
+                <h4 class="highlight">SERIA OKIEN BLUEVOLUTION 82</h4>
+                <p class="bold-large">WZORCOWY PRODUKT</p>
+                <p>Okno oparte na systemie firmy Salamander, wyróżniające się bardzo dobrymi parametrami. Szeroko stosowane w różnych typach współczesnego budownictwa. Stolarka bE82 występuje z dwoma lub trzema uszczelkami, standardowo stosowane jest w niej szkło termiczne k=0,5.</p>
+                <p><a href="#" class="link-hover">Poznaj Bluevolution 82mm</a></p>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <img src="1A.jpg" alt=NEO-ALU-STYLE>
+            <div>
+                <h3>Linia stylistyczna dizajn - 76mm zabudowy</h3>
+                <h4 class="highlight">SERIA OKIEN NEO-ALU-STYLE</h4>
+                <p class="bold-large">NEO OKNA DO KAŻDEGO WNĘTRZA</p>
+                <p>Prezentujemy Państwu całkowicie nowy system stolarki okiennej NEO-ALU-STYLE oparty na profilach Aluplast. Zaprojektowany według najnowszych trendów i wiedzą z ostatnich dziesięcioleci. Zadbaliśmy o to, żeby była to wyjątkowa stolarka pod względem stylistycznym i spełniała najwyższe standardy techniczne. Klasyczna prostota i nowoczesny NEO-ALU-STYLE w połączeniu z nową gamą kolorystyczną to nieograniczone możliwości designu każdego wnętrza.</p>
+                <p><a href="#" class="link-hover">Poznaj NEO-ALU-STYLE</a></p>
+            </div>
+        </div>
+         
+        <div class="product-section">
+            <img src="1D.jpg" alt=eDrivePlus+>
+            <div>
+                <h3>Linia stylistyczna Salamander systemy przesuwne</h3>
+                <h4 class="highlight">evolutionDrive Plus+</h4>
+                <p class="bold-large">WYGODA I OSZCZĘDNOŚĆ</p>
+                <p>Elementy przesuwne: oszczędzające miejsce, otwierające przestrzeń – zysk na przestrzeń życiową. Salamander ponownie prezentuje się jako innowator w dziedzinie rozwiązań okiennych i drzwiowych. Przy każdym nowym rozwiązaniu firma zawsze zwraca uwagę na doświadczalność, design, komfort i zrównoważoność swoich produktów, aby osiągnąć jak najlepsze rezultaty dla swoich klientów i przyszłości okna.
+</p>
+                <p><a href="#" class="link-hover">Poznaj evolutionDrive Plus+</a></p>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <img src="1E.jpg" alt=bE92mm>
+            <div>
+                <h3>Linia stylistyczna Salamander systemy przesuwne</h3>
+                <h4 class="highlight">evolutionDrive HST</h4>
+                <p class="bold-large">WYGODA I OSZCZĘDNOŚĆ</p>
+                <p>Komfortowe rozwiązanie drzwi przesuwno-uchylnych do łączenia z otoczeniem na zewnątrz. Dzięki dużym elementom okiennym wpuszczasz światło do swojego domu,które ożywiają Twoje wnętrze. Konstrukcja drzwi została zaprojektowana dla osiągnięcia optymalnej stabilności i umożliwia stosowanie dużych powierzchni szklanych oraz dużych elementów otwieralnych w różnych schematach obsługi. Skuteczna izolacja dzięki zoptymalizowanym poziomym uszczelkom, szczególnie w obszarze środkowym – aby zimno pozostało tam, gdzie powinno.
+</p>
+                <p><a href="#" class="link-hover">Poznaj evolutionDrive HST</a></p>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <img src="1B.jpg" alt="Ideal 4000">
+            <div>
+                <h3>Linia stylistyczna Ideal 4000 70mm zabudowy</h3>
+                <h4 class="highlight">SERIA OKIEN IDEAL 4000</h4>
+                <p class="bold-large">SPRAWDZONE OKNA DO RENOWACJI</p>
+                <p>Aluplast Ideal 4000 to sprawdzony od wielu lat system. Skrzydło okienne ostatnio zmodyfikowane do wersji multi-falc umożliwia klejenie do niego szkła w celu zwiększenia sztywności. Okna Ideal 4000 nadal cieszą się dużym powodzeniem w starszym budownictwie wymagającym wymiany stolarki, jak również w nowych obiektach z niższymi wymaganiami termicznymi.</p>
+                <p><a href="#" class="link-hover">Poznaj BlueEvolution</a></p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
