@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,26 +14,32 @@
             padding: 0;
             background: linear-gradient(to right, #83a4d4, #b6fbff);
             color: #333;
+            overflow: auto;
         }
         header {
-            background-color: #333;
+            background-color: #707a3c;
             color: white;
             padding: 1rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url('images/tło.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 150px; /* Dajemy minimalną wysokość, by tło było widoczne */
         }
         header img {
-            max-width: 100px;
-            margin-right: 1rem;
+            max-width: 300px;
+            scroll-margin-block: 1rem;
         }
         header div {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
         header div h1, header div h2 {
-            margin: 0;
+            margin: 0.5rem;
         }
         .links {
             display: flex;
@@ -41,7 +49,7 @@
             color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border: 2px solid #00f;
+            border: 2px solid rgb(140, 255, 0);
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
         }
@@ -75,6 +83,7 @@
         }
         main {
             padding: 2rem;
+            min-width: 800px; /* Minimalna szerokość strony */
         }
         .lower-section {
             display: flex;
@@ -82,7 +91,8 @@
             padding: 1rem;
             margin: 2rem 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 10px; 
+            height: 500px; /* Stała wysokość */
         }
         .lower-section img {
             max-width: 100px;
@@ -106,8 +116,8 @@
         }
         .gallery {
             display: flex;
-            flex-wrap: wrap;
             gap: 1rem;
+            overflow-x: hidden; /* Zapewnij widoczność na mniejszych ekranach */
         }
         .gallery img {
             max-width: 200px;
@@ -138,7 +148,7 @@
             width: 100%;
         }
         .close {
-            position: absolute;
+            position: relative;
             top: 20px;
             right: 35px;
             color: white;
@@ -152,47 +162,105 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .image-with-text {
+            float: left;
+            margin: 0;
+            width: 100px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .full-width-image {
+            position: relative;
+            width: 100%;
+            min-height: 300px; /* Dajemy minimalną wysokość, by overlay miał przestrzeń */
+        }
+        .full-width-image img {
+            width: 100%;
+            height: 600px;
+            display: block; /* Usuwamy potencjalne odstępy pod obrazem */
+        }
+        .overlay-text {
+            position: absolute; /* Pozycjonowanie względem obrazu */
+            bottom: 40px; /* Odległość od dołu obrazu */
+            left: 20px; /* Odległość od lewej krawędzi obrazu */
+            color: white;
+            text-align: left;
+            padding: 1rem;
+            width: calc(70% - 60px); /* Szerokość z uwzględnieniem paddingu */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            max-height: none; /* Maksymalna wysokość */
+        }
+        .overlay-text h2 {
+            font-size: 35px;
+            color: #ff0;
+            margin: 20px;
+        }
+        .overlay-text p {
+            font-size: 20px;
+            color: #ff0;
+            margin: 0;
+        } .centered-text {
+        text-align: 100px; /* Wycentrowanie tekstu */
+        border: 2px solid #333; /* Obwódka wokół tekstu */
+        padding: 1rem; /* Dodanie odstępu wewnętrznego */
+        margin: 2rem 0; /* Dodanie odstępu zewnętrznego */
+        display: inline-block; /* Ustawienie elementu jako inline-block */
+        background-color: #fff; /* Opcjonalnie: tło dla lepszej czytelności */
+        border-radius: 10px; /* Opcjonalnie: zaokrąglenie rogów */
+        position: center; 
+        transform: translate(+120%, +10%);
+        }
     </style>
 </head>
 <body>
     <header>
         <div>
-            <img src="logo.png" alt="Logo Firmy">
-            <h1>Producent okien i drzwi</h1>
+            <img src="images/LOGO.png" alt="Logo Firmy">
+            <h1>Produkujemy od lat</h1>
         </div>
         <div class="links">
-            <a href="#">Stolarka PVC</a>
-            <a href="#">Okna Przesuwne</a>
-            <a href="#">Transport usługi</a>
+            <a href="pages/produkty.html">Stolarka PVC</a>
+            <a href="index.html">Strona główna</a>
+            <a href="pages/galeria.html">Współpraca</a>
         </div>
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Strona główna</a></li>
-            <li><a href="#program">Program</a></li>
-            <li><a href="#about">O nas</a></li>
-            <li><a href="#sale">Wyprzedaż</a></li>
-            <li><a href="#shop">Sklep</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="index.html" onclick="window.location.href=this.href">Strona główna</a></li>
+            <li><a href="pages/blog.html" onclick="window.location.href=this.href">Blog</a></li>
+            <li><a href="pages/galeria.html" onclick="window.location.href=this.href">Galeria</a></li>
+            <li><a href="pages/konfigurator.html" onclick="window.location.href=this.href">Konfigurator</a></li>
+            <li><a href="pages/kontakt.html" onclick="window.location.href=this.href">Kontakt</a></li>
+            <li><a href="pages/porady.html" onclick="window.location.href=this.href">Porady</a></li>
+            <li><a href="pages/produkty.html" onclick="window.location.href=this.href">Produkty</a></li>
+            <li><a href="pages/programy_pokazowe.html" onclick="window.location.href=this.href">Programy pokazowe</a></li>
+            <li><a href="pages/techniki.html" onclick="window.location.href=this.href">Techniki</a></li>
+            <li><a href="pages/wyrysy_techniczne.html" onclick="window.location.href=this.href">Wzory techniczne</a></li>
         </ul>
     </nav>
     <main id="home">
-        <h2>Wieloletnia doświadczenie - fachowa wycena.</h2>
-        <p>Indywidualnie podejście do każdego klienta i jego potrzeb jest dla nas kluczowe.</p>
+        <div class="full-width-image">
+            <img src="images/produkty/A.jpg" alt="Twoje wnętrze" class="image-with-text">
+            <div class="overlay-text">
+                <h2>Wieloletnie doświadczenie - fachowa wycena.</h2>
+                <p>Indywidualnie podejście do każdego klienta i jego potrzeb jest dla nas kluczowe.</p>
+            </div>
+        </div>
+        <h1 class="centered-text">DZIAŁAMY NA PROFILACH</h1>
         <div class="gallery">
-            <img src="zdjecie1.jpg" alt="Opis zdjęcia 1">
-            <img src="zdjecie2.jpg" alt="Opis zdjęcia 2">
-            <img src="zdjecie3.jpg" alt="Opis zdjęcia 3">
-            <img src="zdjecie4.jpg" alt="Opis zdjęcia 4">
+            <img src="salamander.jpg" alt="Bluevolution 82mm">
+            <img src="aluplast.jpg" alt="NEO-ALU-STYLE 76mm">
+            <img src="systemy_przesuwne.jpg" alt="EvolutionDrive Plus+">
         </div>
         <p>KOMPLEKSOWE USŁUGI.</p>
         
         <div class="lower-section" id="about">
             <img src="obraz.jpg" alt="Obraz">
             <div>
-                <h3>Nagłówek 1</h3>
-                <h4>Nagłówek 2</h4>
-                <p>Tekst opisujący zawartość sekcji z mniejszą czcionką.</p>
+                <h3>SERIA STOLARKI NEO</h3>
+                <h4>NEO-ALU-STYLE</h4>
+                <p>Technologia w służbie nowoczesnego wzornictwa, teraz nie musisz już iść na kompromisy, żeby zrealizować ambitne cele</p>
                 <p><a href="#">Poznaj serię stolarki...</a></p>
             </div>
         </div>
@@ -208,7 +276,11 @@
         </div>
     </div>
 
+    <div id="root"></div>
+    <script src="js/index.js"></script>
+
     <script>
+        // Usuń ten fragment kodu, jeśli chcesz, aby linki działały normalnie
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -222,8 +294,12 @@
         const modalImg = document.getElementById("modal-img");
         const closeBtn = document.getElementsByClassName("close")[0];
 
-        document.querySelectorAll('.gallery img').forEach(img => {
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+
+        images.forEach((img, index) => {
             img.addEventListener('click', function() {
+                currentIndex = index;
                 modal.style.display = "block";
                 modalImg.src = this.src;
             });
@@ -238,10 +314,22 @@
                 modal.style.display = "none";
             }
         }
+
+        document.addEventListener('keydown', function(event) {
+            if (modal.style.display === "block") {
+                if (event.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    modalImg.src = images[currentIndex].src;
+                } else if (event.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    modalImg.src = images[currentIndex].src;
+                }
+        }
+    });
     </script>
     <script src="helpers/dom-helper.js"></script>
     <script>
-      const button = getElementById('myButton');
+      const button = document.getElementById('myButton');
       addClass(button, 'active');
     </script>
 

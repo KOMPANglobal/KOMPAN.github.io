@@ -13,6 +13,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  font-size: 1rem; /* 1rem = 16px domyślnie */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,10 +26,17 @@ header {
   padding: 20px;
   text-align: center;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   font-size: 2.5rem;
+}
+
+header img {
+  max-width: 10rem; /* 10rem = 160px */
 }
 
 /* Sekcja treści */
@@ -100,6 +108,80 @@ select, input {
   transform: scale(1.05);
 }
 
+/* Stylizacja galerii */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ustaw wysokość galerii */
+}
+
+.gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Stylizacja galerii */
+.product-section img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-section img:hover {
+    transform: scale(1.1);
+}
+
+/* Stylizacja modala */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content img {
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Responsywność dla urządzeń mobilnych */
 @media (max-width: 768px) {
   header h1 {
@@ -117,5 +199,90 @@ select, input {
 
   footer {
     font-size: 0.8rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lower-section {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    max-width: 100%;
+  }
+}
+
+/* Użyj Flexboxa */
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Wyśrodkuj elementy */
+  flex-wrap: wrap; /* Pozwól elementom zawijać się na mniejszych ekranach */
+}
+
+nav ul li {
+  margin: 0.5rem; /* Dodaj margines wokół elementów */
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+  background-color: rgba(255, 215, 0, 0.3); /* Złotawa ramka w tle */
+  border: 2px solid rgba(255, 215, 0, 0.6); /* Złotawa ramka */
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 215, 0, 0.6); /* Zmiana koloru tła na złotawy przy najechaniu */
+  color: white;
+}
+
+.lower-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+  padding: 0.5rem 1rem;
+}
+
+.lower-section img {
+  max-width: 10rem; /* 10rem = 160px */
+}
+
+/* Dodaj media queries dla mniejszych ekranów */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Ustaw elementy w kolumnie na mniejszych ekranach */
+    align-items: center; /* Wyśrodkuj elementy w kolumnie */
+  }
+
+  nav ul li {
+    margin: 0.5rem 0; /* Dodaj margines pionowy wokół elementów */
   }
 }

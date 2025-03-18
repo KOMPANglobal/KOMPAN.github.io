@@ -69,6 +69,11 @@
         .product-section img {
             max-width: 200px;
             margin-right: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .product-section img:hover {
+            transform: scale(1.1);
         }
         .product-section div {
             flex-grow: 1;
@@ -107,6 +112,42 @@
             font-size: 0.9rem;
             color: #d9534f;
         }
+        /* Stylizacja modala */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -116,9 +157,9 @@
             <h1>Okna i drzwi przez dekady</h1>
         </div>
         <div class="links">
-            <a href="#">Stolarka PVC</a>
-            <a href="#">Okna Przesuwne</a>
-            <a href="#">Transport usługi</a>
+            <a href="pages/produkty.html">Stolarka PVC</a>
+            <a href="index.html">Strona główna</a>
+            <a href="pages/galeria.html">Współpraca</a>
         </div>
     </header>
     <main>
@@ -130,42 +171,54 @@
                 <h3>Linia stylistyczna Salamander Bluevolution 82mm</h3>
                 <h4 class="highlight">SERIA OKIEN BLUEVOLUTION 82</h4>
                 <p class="bold-large">WZORCOWY PRODUKT</p>
-                <p>Okno oparte na systemie firmy Salamander, wyróżniające się bardzo dobrymi parametrami. Szeroko stosowane w różnych typach współczesnego budownictwa. Stolarka bE82 występuje z dwoma lub trzema uszczelkami, standardowo stosowane jest w niej szkło termiczne k=0,5.</p>
+                <p>Okno oparte na systemie firmy Salamander, wyróżniające się bardzo dobrymi parametrami. 
+                    Szeroko stosowane w różnych typach współczesnego budownictwa. 
+                    Stolarka bE82 występuje z dwoma lub trzema uszczelkami, standardowo stosowane jest w niej szkło termiczne k=0,5.</p>
                 <p><a href="#" class="link-hover">Poznaj Bluevolution 82mm</a></p>
             </div>
         </div>
 
         <div class="product-section">
-            <img src="1A.jpg" alt=NEO-ALU-STYLE>
+            <img src="1A.jpg" alt="NEO-ALU-STYLE">
             <div>
                 <h3>Linia stylistyczna dizajn - 76mm zabudowy</h3>
                 <h4 class="highlight">SERIA OKIEN NEO-ALU-STYLE</h4>
                 <p class="bold-large">NEO OKNA DO KAŻDEGO WNĘTRZA</p>
-                <p>Prezentujemy Państwu całkowicie nowy system stolarki okiennej NEO-ALU-STYLE oparty na profilach Aluplast. Zaprojektowany według najnowszych trendów i wiedzą z ostatnich dziesięcioleci. Zadbaliśmy o to, żeby była to wyjątkowa stolarka pod względem stylistycznym i spełniała najwyższe standardy techniczne. Klasyczna prostota i nowoczesny NEO-ALU-STYLE w połączeniu z nową gamą kolorystyczną to nieograniczone możliwości designu każdego wnętrza.</p>
+                <p>Prezentujemy Państwu całkowicie nowy system stolarki okiennej NEO-ALU-STYLE oparty na profilach Aluplast. 
+                    Zaprojektowany według najnowszych trendów i wiedzą z ostatnich dziesięcioleci. 
+                    Zadbaliśmy o to, żeby była to wyjątkowa stolarka pod względem stylistycznym i spełniała najwyższe standardy techniczne. 
+                    Klasyczna prostota i nowoczesny NEO-ALU-STYLE w połączeniu z nową gamą kolorystyczną to nieograniczone możliwości designu każdego wnętrza.</p>
                 <p><a href="#" class="link-hover">Poznaj NEO-ALU-STYLE</a></p>
             </div>
         </div>
          
         <div class="product-section">
-            <img src="1D.jpg" alt=eDrivePlus+>
+            <img src="1D.jpg" alt="eDrivePlus+">
             <div>
                 <h3>Linia stylistyczna Salamander systemy przesuwne</h3>
                 <h4 class="highlight">evolutionDrive Plus+</h4>
                 <p class="bold-large">WYGODA I OSZCZĘDNOŚĆ</p>
-                <p>Elementy przesuwne: oszczędzające miejsce, otwierające przestrzeń – zysk na przestrzeń życiową. Salamander ponownie prezentuje się jako innowator w dziedzinie rozwiązań okiennych i drzwiowych. Przy każdym nowym rozwiązaniu firma zawsze zwraca uwagę na doświadczalność, design, komfort i zrównoważoność swoich produktów, aby osiągnąć jak najlepsze rezultaty dla swoich klientów i przyszłości okna.
-</p>
+                <p>Elementy przesuwne: oszczędzające miejsce, otwierające przestrzeń – zysk na przestrzeń życiową. 
+                    Salamander ponownie prezentuje się jako innowator w dziedzinie rozwiązań okiennych i drzwiowych. 
+                    Przy każdym nowym rozwiązaniu firma zawsze zwraca uwagę na doświadczalność, design, komfort i zrównoważoność 
+                    swoich produktów, aby osiągnąć jak najlepsze rezultaty dla swoich klientów i przyszłości okna.
+                </p>
                 <p><a href="#" class="link-hover">Poznaj evolutionDrive Plus+</a></p>
             </div>
         </div>
         
         <div class="product-section">
-            <img src="1E.jpg" alt=bE92mm>
+            <img src="1E.jpg" alt="bE92mm">
             <div>
                 <h3>Linia stylistyczna Salamander systemy przesuwne</h3>
                 <h4 class="highlight">evolutionDrive HST</h4>
                 <p class="bold-large">WYGODA I OSZCZĘDNOŚĆ</p>
-                <p>Komfortowe rozwiązanie drzwi przesuwno-uchylnych do łączenia z otoczeniem na zewnątrz. Dzięki dużym elementom okiennym wpuszczasz światło do swojego domu,które ożywiają Twoje wnętrze. Konstrukcja drzwi została zaprojektowana dla osiągnięcia optymalnej stabilności i umożliwia stosowanie dużych powierzchni szklanych oraz dużych elementów otwieralnych w różnych schematach obsługi. Skuteczna izolacja dzięki zoptymalizowanym poziomym uszczelkom, szczególnie w obszarze środkowym – aby zimno pozostało tam, gdzie powinno.
-</p>
+                <p>Komfortowe rozwiązanie drzwi przesuwno-uchylnych do łączenia z otoczeniem na zewnątrz. 
+                    Dzięki dużym elementom okiennym wpuszczasz światło do swojego domu,które ożywiają Twoje wnętrze. 
+                    Konstrukcja drzwi została zaprojektowana dla osiągnięcia optymalnej stabilności i umożliwia stosowanie 
+                    dużych powierzchni szklanych oraz dużych elementów otwieralnych w różnych schematach obsługi. 
+                    Skuteczna izolacja dzięki zoptymalizowanym poziomym uszczelkom, szczególnie w obszarze środkowym – aby zimno pozostało tam, gdzie powinno.
+                </p>
                 <p><a href="#" class="link-hover">Poznaj evolutionDrive HST</a></p>
             </div>
         </div>
@@ -176,11 +229,61 @@
                 <h3>Linia stylistyczna Ideal 4000 70mm zabudowy</h3>
                 <h4 class="highlight">SERIA OKIEN IDEAL 4000</h4>
                 <p class="bold-large">SPRAWDZONE OKNA DO RENOWACJI</p>
-                <p>Aluplast Ideal 4000 to sprawdzony od wielu lat system. Skrzydło okienne ostatnio zmodyfikowane do wersji multi-falc umożliwia klejenie do niego szkła w celu zwiększenia sztywności. Okna Ideal 4000 nadal cieszą się dużym powodzeniem w starszym budownictwie wymagającym wymiany stolarki, jak również w nowych obiektach z niższymi wymaganiami termicznymi.</p>
+                <p>Aluplast Ideal 4000 to sprawdzony od wielu lat system. Skrzydło okienne ostatnio zmodyfikowane do wersji multi-falc 
+                    umożliwia klejenie do niego szkła w celu zwiększenia sztywności. Okna Ideal 4000 nadal cieszą się dużym powodzeniem 
+                    w starszym budownictwie wymagającym wymiany stolarki, jak również w nowych obiektach z niższymi wymaganiami termicznymi.</p>
                 <p><a href="#" class="link-hover">Poznaj BlueEvolution</a></p>
             </div>
         </div>
 
     </main>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Modal Image">
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.product-section img');
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', function() {
+                currentIndex = index;
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (modal.style.display === "block") {
+                if (event.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    modalImg.src = images[currentIndex].src;
+                } else if (event.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    modalImg.src = images[currentIndex].src;
+                }
+            }
+        });
+    </script>
 </body>
 </html>
