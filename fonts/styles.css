@@ -1,0 +1,43 @@
+/* Importowanie czcionek z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&family=League+Spartan:wght@700&display=swap');
+
+/* Stylizacja dla dużych tytułów (Montserrat) */
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Pogrubienie dla tytułów */
+    font-size: 2.5rem; /* Duży rozmiar dla tytułów */
+    color: #333; /* Ciemny kolor dla czytelności */
+    text-align: center; /* Centrowanie dla efektu wizualnego */
+    margin-bottom: 20px; /* Margines na dole */
+}
+
+/* Stylizacja dla tekstu informacyjnego (Inter) */
+.inter {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Standardowa waga dla czytelności */
+    font-size: 1.1rem; /* Rozmiar odpowiedni dla tekstu informacyjnego */
+    color: #666; /* Szary kolor dla tekstu */
+    line-height: 1.6; /* Odstęp między liniami dla lepszej czytelności */
+    margin-bottom: 20px; /* Margines na dole */
+}
+
+/* Stylizacja dla wyszczególnienia nazwy (League Spartan) */
+.league-spartan {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700; /* Pogrubienie dla wyróżnienia */
+    font-size: 1.5rem; /* Rozmiar większy od tekstu informacyjnego, ale mniejszy od tytułów */
+    color: #2c3e50; /* Głęboki niebieski kolor dla kontrastu */
+    text-transform: uppercase; /* Wielkie litery dla efektu wyróżnienia */
+}
+
+.highlight {
+    margin-bottom: 20px; /* Margines na dole dla odstępu */
+}
+
+/* Ogólne ustawienia dla ciała strony */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', sans-serif; /* Domyślna czcionka dla reszty treści */
+    background-color: #f5f5f5; /* Jasne tło dla lepszej czytelności */
+}
